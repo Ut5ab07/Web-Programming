@@ -17,6 +17,7 @@ body {
 }
 
 header {
+    position: relative;
     text-align: center;
     padding: 20px 0 30px;
 }
@@ -25,6 +26,25 @@ header h1 {
     color: beige;
     font-size: clamp(2rem, 3vw, 2.8rem);
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.home-button {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 32px;
+    height: 32px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #8b5e3c;
+    border-radius: 999px;
+    background: rgba(245, 230, 200, 0.95);
+    color: #5a2d0c;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 details {
@@ -90,6 +110,14 @@ summary:hover {
 @media (max-width: 600px) {
     body {
         padding: 15px 12px 30px;
+    }
+
+    .home-button {
+        top: 8px;
+        left: 8px;
+        width: 28px;
+        height: 28px;
+        font-size: 0.95rem;
     }
 
     details {
