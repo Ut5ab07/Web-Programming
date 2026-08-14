@@ -1,0 +1,82 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(#f7e7d6, #f5d7b6);
+    color: #4a2c1b;
+}
+
+h1, h2 {
+    text-align: center;
+    color: #5a2d0c;
+
+}
+
+h1 {
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+h2 {
+    margin-bottom: 25px;
+    border-bottom: 2px solid #5a2d0c;
+}
+
+form {
+    width: 90%;
+    max-width: 650px;
+    margin: 0 auto 40px;
+    background: #fffaf2;
+    border: 2px solid #8b5e3c;
+    border-radius: 12px;
+    padding: 25px 30px;
+    box-shadow: 0 6px 12px rgba(90, 45, 12, 0.12);
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #5a2d0c;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 10px 12px;
+    margin-bottom: 18px;
+    border: 1px solid #c99b6b;
+    border-radius: 8px;
+    font-size: 15px;
+    background: #fff;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    width: auto;
+    margin-right: 8px;
+    margin-bottom: 10px;
+}
+
+input[type="submit"],
+input[type="reset"] {
+    width: auto;
+    padding: 10px 22px;
+    background: #8b5e3c;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+    background: #6d452c;
+}
+
+form br {
+    display: none;
+}
+
+select {
+    appearance: none;
+}

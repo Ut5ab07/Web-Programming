@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cultural Fest Registration</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1>Cultural Fest 2026</h1>
+    <h2>Participant Registration Form</h2>
+
+    <form>
+        <label>Full Name:</label>
+        <input type="text" name="fullname" placeholder="Enter your full name">
+        <br><br>
+
+        <label>Email:</label>
+        <input type="email" name="email" placeholder="Enter your email">
+        <br><br>
+
+        <label>Phone Number:</label>
+        <input type="tel" name="phone" placeholder="Enter your phone number">
+        <br><br>
+
+        <label>Institute Name:</label>
+        <input type="text" name="institute" placeholder="Enter your institute">
+        <br><br>
+
+        <label>Gender:</label>
+        <input type="radio" name="gender" value="male"> Male
+        <input type="radio" name="gender" value="female"> Female
+        <input type="radio" name="gender" value="other"> Other
+        <br><br>
+
+        <label>Year of Study:</label>
+        <select name="year">
+            <option value="">Select Year</option>
+            <option value="1">1st Year</option>
+            <option value="2">2nd Year</option>
+            <option value="3">3rd Year</option>
+            <option value="4">4th Year</option>
+        </select>
+        <br><br>
+
+        <label>Select Events:</label>
+        <br>
+
+        <input type="checkbox" name="event" value="dance"> Dance
+        <br>
+
+        <input type="checkbox" name="event" value="music"> Music
+        <br>
+
+        <input type="checkbox" name="event" value="drama"> Drama
+        <br>
+
+        <input type="checkbox" name="event" value="photography"> Photography
+        <br><br>
+
+        <label>Why do you want to participate?</label>
+        <br>
+
+        <textarea name="message" rows="5" cols="40"
+            placeholder="Tell us about yourself..."></textarea>
+        <br><br>
+
+        <input type="submit" value="Register">
+        <input type="reset" value="Reset">
+
+    </form>
+
+</body>
+</html>
