@@ -30,5 +30,16 @@ Design a page to display the product information such as name, brand, pricce and
 ### Output
 
 ![Lab-3 Output](output_images/webtech_lab3.png)
+-----------------------------------------------------------------
+
+## Lab-3 B
+
+Design a web site for book information using frames, home page should contain two parts, left part should contain books list and right part should contain book information
+
+
+### Output
+
+![Lab-3b1 Output](output_images/webtech_lab3b1.png)
+![Lab-3b2 Output](output_images/webtech_lab3b2.png)
 
 
