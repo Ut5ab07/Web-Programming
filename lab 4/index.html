@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Country Capitals</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	<main class="capital-page">
+		<h1>Country Capitals</h1>
+		<p class="intro">Choose a country to see its capital.</p>
+
+		<section class="capital-panel" aria-label="Country and capital selector">
+			<p class="selection-label">Select a country:</p>
+			<div class="selection-row">
+				<div class="country-list">
+					<label class="country-option">
+						<input type="radio" name="country" value="Nepal">
+						<span>Nepal</span>
+					</label>
+					<label class="country-option">
+						<input type="radio" name="country" value="Australia">
+						<span>Australia</span>
+					</label>
+					<label class="country-option">
+						<input type="radio" name="country" value="Spain">
+						<span>Spain</span>
+					</label>
+					<label class="country-option">
+						<input type="radio" name="country" value="France">
+						<span>France</span>
+					</label>
+					<label class="country-option">
+						<input type="radio" name="country" value="Japan">
+						<span>Japan</span>
+					</label>
+				</div>
+
+				<div class="capital-result">
+					<p class="result-label">Capital:</p>
+					<p class="capital capital-nepal">Kathmandu <img class="flag flag-nepal" src="flags/Nepal.png" alt="Flag of Nepal"></p>
+					<p class="capital capital-australia">Canberra <img class="flag" src="flags/Australia.png" alt="Flag of Australia"></p>
+					<p class="capital capital-spain">Madrid <img class="flag" src="flags/Spain.png" alt="Flag of Spain"></p>
+					<p class="capital capital-france">Paris <img class="flag" src="flags/France.png" alt="Flag of France"></p>
+					<p class="capital capital-japan">Tokyo <img class="flag" src="flags/Japan.png" alt="Flag of Japan"></p>
+				</div>
+			</div>
+		</section>
+	</main>
+</body>
+</html>
