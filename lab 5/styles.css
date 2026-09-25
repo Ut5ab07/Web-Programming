@@ -1,0 +1,131 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	min-height: 100vh;
+	margin: 0;
+	padding: 28px 18px;
+	font-family: Arial, sans-serif;
+	color: #f3f8fb;
+	background-image: linear-gradient(rgba(20, 43, 61, 0.76), rgba(42, 91, 119, 0.68)), url("../lab 5/image/background.webp");
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+}
+
+.college-page {
+	width: min(100%, 950px);
+	margin: 0 auto;
+}
+
+.college-header {
+	padding: 26px 20px 22px;
+	text-align: center;
+	border-bottom: 2px solid #c8dce8;
+}
+
+.college-header h1 {
+	margin: 0;
+	color: #e8f3f8;
+	font-family: cursive;
+	font-size: clamp(2rem, 5vw, 3.6rem);
+	line-height: 1.15;
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.55);
+}
+
+.college-header p {
+	margin: 12px 0 0;
+	color: #dcecf3;
+	font-size: clamp(0.95rem, 2vw, 1.2rem);
+}
+
+.notice {
+	display: flex;
+	align-items: center;
+	margin: 28px 0;
+	overflow: hidden;
+	background: #f3f8fb;
+	border: 2px solid #56819a;
+	color: #173b55;
+}
+
+.notice-label {
+	flex: 0 0 auto;
+	padding: 13px 18px;
+	background: #56819a;
+	color: #f3f8fb;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+.scrolling-text {
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+.scrolling-text span {
+	display: inline-block;
+	padding: 13px 0 13px 100%;
+	animation: scroll-notice 22s linear infinite;
+}
+
+@keyframes scroll-notice {
+	from {
+		transform: translateX(0);
+	}
+	to {
+		transform: translateX(-100%);
+	}
+}
+
+.courses {
+	padding: 24px;
+	background: rgba(243, 248, 251, 0.94);
+	border: 2px solid #56819a;
+	border-radius: 8px;
+}
+
+.courses h2 {
+	margin: 0 0 22px;
+	color: #173b55;
+	font-family: cursive;
+	font-size: 2rem;
+	text-align: center;
+}
+
+.course-list {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 14px;
+}
+
+.course {
+	margin: 0;
+	padding: 16px 12px;
+	background: #e5f0f5;
+	border-left: 6px solid #56819a;
+	text-align: center;
+	font-size: 1.15rem;
+	font-family: Arial, sans-serif;
+	color: #173b55;
+	font-weight: normal;
+	font-style: normal;
+	text-decoration: none;
+}
+/*
+@media (max-width: 620px) {
+	.course-list {
+		grid-template-columns: 1fr;
+	}
+
+	.notice {
+		align-items: stretch;
+		flex-direction: column;
+	}
+
+	.notice-label {
+		text-align: center;
+	}
+}
+*/
