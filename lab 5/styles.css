@@ -78,7 +78,6 @@ body {
 		transform: translateX(-100%);
 	}
 }
-
 .courses {
 	padding: 24px;
 	background: rgba(243, 248, 251, 0.94);
@@ -101,6 +100,7 @@ body {
 }
 
 .course {
+    cursor  : pointer;
 	margin: 0;
 	padding: 16px 12px;
 	background: #e5f0f5;
@@ -113,6 +113,17 @@ body {
 	font-style: normal;
 	text-decoration: none;
 }
+
+.course:nth-child(1) { background: #e1eff5; border-left-color: #4f7890; font-family: Georgia, serif; }
+.course:nth-child(2) { background: #d8eaf2; border-left-color: #56819a; font-family: "Courier New", monospace; }
+.course:nth-child(3) { background: #cfe4ee; border-left-color: #47758e; font-family: Verdana, sans-serif; }
+.course:nth-child(4) { background: #c5dfeb; border-left-color: #3f6d85; font-family: "Trebuchet MS", sans-serif; }
+.course:nth-child(5) { background: #dcecf3; border-left-color: #628da4; font-family: "Times New Roman", serif; }
+.course:nth-child(6) { background: #d2e7f0; border-left-color: #507f98; font-family: Impact, sans-serif; }
+.course:nth-child(7) { background: #c9e1ec; border-left-color: #416f88; font-family: Garamond, serif; }
+.course:nth-child(8) { background: #e5f1f6; border-left-color: #6a94a9; font-family: "Lucida Console", monospace; }
+.course:nth-child(9) { background: #d6e9f1; border-left-color: #5a879f; font-family: Tahoma, sans-serif; }
+.course:nth-child(10) { background: #bdd9e6; border-left-color: #37657e; font-family: cursive; }
 /*
 @media (max-width: 620px) {
 	.course-list {
