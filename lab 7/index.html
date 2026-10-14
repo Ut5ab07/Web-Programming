@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A simple form-based calculator.">
+    <title>Everyday Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="lab-shell">
+        <header class="topbar">
+            <a class="wordmark" href="#" aria-label="Calculator home">
+                <span class="wordmark-mark">∑</span>
+                <span>CALCULATOR</span>
+            </a>
+            <p class="lab-label">SIMPLE TOOLS <strong>/ CALCULATE</strong></p>
+        </header>
+
+        <section class="intro" aria-labelledby="page-title">
+            <div class="intro-copy">
+                <p class="kicker">Arithmetic tool</p>
+                <h1 id="page-title">Make numbers<br><em>simple.</em></h1>
+                <p class="intro-text">Enter two values and choose an operation to find your answer.</p>
+            </div>
+            <div class="intro-stamp" aria-hidden="true">
+                <span>+</span>
+                <small>ADD<br>UP</small>
+            </div>
+        </section>
+
+        <section class="workspace" aria-label="Calculator workspace">
+            <form class="calculator" id="calculatorForm">
+                <div class="input-row">
+                    <label class="number-field">
+                        <span class="field-index">01</span>
+                        <span class="field-label">First value</span>
+                        <input id="firstNumber" name="firstNumber" type="number" step="any" placeholder="0" required>
+                    </label>
+                    <div class="connector" aria-hidden="true">+</div>
+                    <label class="number-field">
+                        <span class="field-index">02</span>
+                        <span class="field-label">Second value</span>
+                        <input id="secondNumber" name="secondNumber" type="number" step="any" placeholder="0" required>
+                    </label>
+                </div>
+
+                <fieldset class="operation-picker">
+                    <legend>Choose an operation</legend>
+                    <div class="operation-grid">
+                        <label class="operation-option">
+                            <input type="radio" name="operation" value="add" checked>
+                            <span class="operation-card"><b>＋</b><small>ADD</small></span>
+                        </label>
+                        <label class="operation-option">
+                            <input type="radio" name="operation" value="subtract">
+                            <span class="operation-card"><b>−</b><small>SUBTRACT</small></span>
+                        </label>
+                        <label class="operation-option">
+                            <input type="radio" name="operation" value="multiply">
+                            <span class="operation-card"><b>×</b><small>MULTIPLY</small></span>
+                        </label>
+                        <label class="operation-option">
+                            <input type="radio" name="operation" value="divide">
+                            <span class="operation-card"><b>÷</b><small>DIVIDE</small></span>
+                        </label>
+                    </div>
+                </fieldset>
+
+                <div class="form-actions">
+                    <button class="calculate-button" type="submit">Calculate <span>→</span></button>
+                    <button class="reset-button" type="reset">Clear inputs</button>
+                </div>
+            </form>
+
+            <aside class="result-panel" aria-live="polite">
+                <div class="result-header">
+                    <span>OUTPUT</span>
+                    <span class="status-dot">READY</span>
+                </div>
+                <div class="result-equation" id="equation">— <span>?</span> —</div>
+                <div class="result-value" id="result">0</div>
+                <p class="result-note" id="resultNote">Your answer will appear here.</p>
+            </aside>
+        </section>
+
+        <section class="history-section" aria-labelledby="history-title">
+            <div class="section-heading">
+                <div>
+                    <p class="kicker">History</p>
+                    <h2 id="history-title">Recent calculations</h2>
+                </div>
+                <button class="clear-history" id="clearHistory" type="button">Clear log <span>×</span></button>
+            </div>
+            <ol class="history-list" id="historyList">
+                <li class="empty-history">No calculations yet. Your working will be logged here.</li>
+            </ol>
+        </section>
+
+        <footer class="footer">
+            <span>EVERYDAY CALCULATOR</span>
+            <span>PRESS ENTER TO CALCULATE</span>
+        </footer>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
