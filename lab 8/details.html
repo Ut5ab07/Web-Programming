@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Your personal profile.">
+    <title>Your profile</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="details">
+    <main class="page-frame profile-frame">
+        <header class="masthead">
+            <a class="quiet-link" href="index.html">Edit details</a>
+        </header>
+
+        <section class="profile-heading">
+            <p class="overline">Profile preview</p>
+            <h1>Nice to<br><strong>meet you.</strong></h1>
+            <p class="profile-caption" id="detailsIntro">Here is the information you shared with us.</p>
+        </section>
+
+        <section class="profile-card" aria-labelledby="detailsTitle">
+            <div class="profile-card-top">
+                <div class="avatar" aria-hidden="true">+</div>
+                <div>
+                    <p class="overline">Personal profile</p>
+                    <h2 id="detailsTitle">Your information</h2>
+                </div>
+                <span class="status-label">READY</span>
+            </div>
+
+            <div class="profile-details" id="detailsGrid"></div>
+            <p class="empty-message" id="emptyMessage" hidden>
+                There is no profile to show yet. Go back and add your details first.
+            </p>
+            <div class="profile-actions">
+                <a class="save-button link-button" href="index.html">Return to details <span>←</span></a>
+                <button class="clear-button" id="clearData" type="button">Remove profile</button>
+            </div>
+        </section>
+
+        <footer class="footer"><span>YOUR SPACE</span><span>PROFILE PREVIEW</span></footer>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

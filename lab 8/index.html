@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A simple personal details form.">
+    <title>Personal details</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="form">
+    <main class="page-frame">
+        <header class="masthead">
+            <span class="section-label">Personal details</span>
+        </header>
+
+        <section class="welcome">
+            <div class="welcome-copy">
+                <p class="overline">A little introduction</p>
+                <h1>Make it<br><strong>personal.</strong></h1>
+            </div>
+            <p class="welcome-note">A few details are all we need to create your profile card.</p>
+        </section>
+
+        <section class="workspace" aria-label="Personal details">
+            <aside class="guide-panel">
+                <div class="guide-top">
+                    <span class="guide-label">Getting started</span>
+                    <span class="guide-count">01 / 02</span>
+                </div>
+                <div class="guide-symbol" aria-hidden="true">◎</div>
+                <h2>Start with<br>the basics.</h2>
+                <p>Your details stay together in one clear, easy-to-read profile.</p>
+                <ol class="steps">
+                    <li class="active"><span>01</span>Personal details</li>
+                    <li><span>02</span>Profile preview</li>
+                </ol>
+            </aside>
+
+            <form class="details-form" id="userForm">
+                <div class="form-intro form-intro-row">
+                    <div>
+                        <p class="overline">About you</p>
+                        <h2>Tell us who you are</h2>
+                    </div>
+                    <a class="quiet-link" href="details.html">Open saved profile</a>
+                </div>
+
+                <div class="field-list">
+                    <label class="field">
+                        <span>Full name</span>
+                        <input id="name" name="name" type="text" placeholder="Your name" required>
+                    </label>
+                    <label class="field">
+                        <span>Gender</span>
+                        <select id="gender" name="gender" required>
+                            <option value="">Choose one</option>
+                            <option value="Female">Female</option>
+                            <option value="Male">Male</option>
+                            <option value="Other">Other</option>
+                            <option value="Prefer not to say">Prefer not to say</option>
+                        </select>
+                    </label>
+                    <label class="field">
+                        <span>Mobile number</span>
+                        <input id="mobile" name="mobile" type="tel" inputmode="tel"
+                            placeholder="Your phone number" pattern="[0-9+\-\s()]{7,}" required>
+                    </label>
+                    <label class="field">
+                        <span>Email address</span>
+                        <input id="email" name="email" type="email" placeholder="you@example.com" required>
+                    </label>
+                    <label class="field">
+                        <span>City</span>
+                        <input id="city" name="city" type="text" placeholder="Your city" required>
+                    </label>
+                    <label class="field">
+                        <span>State</span>
+                        <input id="state" name="state" type="text" placeholder="Your state" required>
+                    </label>
+                    <label class="field field-wide">
+                        <span>Country</span>
+                        <input id="country" name="country" type="text" placeholder="Your country" required>
+                    </label>
+                </div>
+
+                <p class="form-message" id="formMessage" role="alert"></p>
+                <div class="form-actions">
+                    <button class="save-button" type="submit">Continue to profile <span>↗</span></button>
+                    <button class="clear-button" type="reset">Start over</button>
+                </div>
+            </form>
+        </section>
+
+        <footer class="footer"><span>YOUR SPACE</span><span>PERSONAL PROFILE</span></footer>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
