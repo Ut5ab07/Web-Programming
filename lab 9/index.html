@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Read student records from an XML file and display them in a table.">
+    <title>XML Data Reader</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="page">
+        <header>
+            <div class="brand">XML <span>Reader</span></div>
+            <div class="file-name">data.xml</div>
+        </header>
+
+        <section class="hero" aria-labelledby="page-title">
+            <div>
+                <p class="eyebrow">Structured data, made clear</p>
+                <h1>Read it.<br><em>See it.</em></h1>
+                <p class="intro">This page reads student records from an XML document and transforms each record into a clear, accessible table.</p>
+            </div>
+            <aside class="loader">
+                <strong>Use another XML file</strong>
+                <p>Choose an XML file from your computer to replace the sample data.</p>
+                <label for="xmlFile" class="sr-only">Choose XML file</label>
+                <input id="xmlFile" type="file" accept=".xml,text/xml,application/xml">
+            </aside>
+        </section>
+
+        <section class="table-card" aria-labelledby="records-title">
+            <div class="table-toolbar">
+                <span class="table-label" id="records-title">Student records</span>
+                <span id="status" role="status">Loading data.xml...</span>
+            </div>
+            <div class="table-wrap">
+                <table>
+                    <thead id="tableHead"></thead>
+                    <tbody id="tableBody">
+                        <tr><td class="empty" colspan="1">Loading records...</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <footer>
+            <span>XML → HTML table</span>
+            <span>Data table</span>
+        </footer>
+    </main>
+
+    <script>
+        const fileInput = document.getElementById("xmlFile");
+        const tableHead = document.getElementById("tableHead");
+        const tableBody = document.getElementById("tableBody");
+        const status = document.getElementById("status");
+
+        function displayXml(xmlText) {
+            const xml = new DOMParser().parseFromString(xmlText, "application/xml");
+            const parseError = xml.querySelector("parsererror");
+            if (parseError) throw new Error("The selected file is not valid XML.");
+
+            const records = [...xml.documentElement.children];
+            if (!records.length) throw new Error("No records were found in the XML file.");
+
+            const columns = [...records[0].children].map((cell) => cell.tagName);
+            tableHead.innerHTML = `<tr>${columns.map((column) => `<th scope="col">${column}</th>`).join("")}</tr>`;
+            tableBody.innerHTML = records.map((record) => {
+                const values = columns.map((column) => {
+                    const cell = [...record.children].find((item) => item.tagName === column);
+                    return `<td>${escapeHtml(cell ? cell.textContent.trim() : "—")}</td>`;
+                }).join("");
+                return `<tr>${values}</tr>`;
+            }).join("");
+            status.textContent = `${records.length} record${records.length === 1 ? "" : "s"} loaded`;
+        }
+
+        function escapeHtml(value) {
+            return value.replace(/[&<>"']/g, (character) => ({
+                "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#039;"
+            }[character]));
+        }
+
+        function showError(error) {
+            tableHead.innerHTML = "";
+            tableBody.innerHTML = `<tr><td class="error" colspan="1">${escapeHtml(error.message)}</td></tr>`;
+            status.textContent = "Unable to load XML";
+        }
+
+        fileInput.addEventListener("change", () => {
+            const file = fileInput.files[0];
+            if (!file) return;
+            const reader = new FileReader();
+            reader.addEventListener("load", () => {
+                try { displayXml(reader.result); } catch (error) { showError(error); }
+            });
+            reader.addEventListener("error", () => showError(new Error("The XML file could not be read.")));
+            reader.readAsText(file);
+        });
+
+        fetch("data.xml")
+            .then((response) => {
+                if (!response.ok) throw new Error("Could not load data.xml. Choose an XML file above.");
+                return response.text();
+            })
+            .then(displayXml)
+            .catch(showError);
+    </script>
+</body>
+</html>

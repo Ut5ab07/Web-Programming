@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<students>
+    <student>
+        <id>101</id>
+        <name>Ananya Sharma</name>
+        <course>BCA</course>
+        <semester>4</semester>
+        <email>ananya@example.com</email>
+    </student>
+    <student>
+        <id>102</id>
+        <name>Rohan Mehta</name>
+        <course>BSc CS</course>
+        <semester>2</semester>
+        <email>rohan@example.com</email>
+    </student>
+    <student>
+        <id>103</id>
+        <name>Meera Nair</name>
+        <course>BCA</course>
+        <semester>6</semester>
+        <email>meera@example.com</email>
+    </student>
+    <student>
+        <id>104</id>
+        <name>Arjun Patel</name>
+        <course>BSc CS</course>
+        <semester>4</semester>
+        <email>arjun@example.com</email>
+    </student>
+</students>
