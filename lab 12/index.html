@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Check site access based on age.">
+    <title>Visitor Check</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="page-shell">
+        <header class="topbar">
+            <a class="brand" href="index.html">ENTRY / 18</a>
+            <span class="server-label">Visitor screening</span>
+        </header>
+
+        <section class="content" aria-labelledby="page-title">
+            <div class="form-card">
+                <div class="card-heading">
+                    <p class="eyebrow">Access request</p>
+                    <h1 id="page-title">Get your<br><strong>entry status.</strong></h1>
+                    <p class="description">A quick check before you step inside.</p>
+                </div>
+                <form id="visitor-form">
+                    <div class="field">
+                        <label for="name">Name</label>
+                        <input id="name" name="name" type="text" autocomplete="name" required>
+                    </div>
+
+                    <div class="field">
+                        <label for="age">Age</label>
+                        <input id="age" name="age" type="number" min="0" required>
+                    </div>
+
+                    <button type="submit">Verify my age <span>→</span></button>
+                </form>
+
+                <div id="result" class="result" role="status" aria-live="polite" hidden></div>
+            </div>
+
+            <aside class="notice" aria-label="Age requirement">
+                <span class="notice-label">Entry requirement</span>
+                <strong>18+</strong>
+                <p>Visitors must be 18 or older to receive a welcome message.</p>
+                <div class="notice-lines" aria-hidden="true"></div>
+                <span class="notice-code">ACCESS / CHECK / 001</span>
+            </aside>
+        </section>
+
+        <footer>
+            <span>Personal details stay in this browser</span>
+            <span>Ready when you are</span>
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
